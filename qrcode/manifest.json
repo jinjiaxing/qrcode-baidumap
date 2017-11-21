@@ -1,0 +1,19 @@
+{
+  "manifest_version":2,
+  "name":"极简二维码",
+  "description":"极简二维码",
+  "version":"1.0",
+  "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+  },
+  "background": { "scripts": ["background.js"] },
+  "permissions": ["tabs"],
+  "browser_action":{
+      "default_icon":"images/icon.png",
+      "default_title":"极简二维码",
+      "default_popup":"popup.html"
+  }
+   
+}
