@@ -14,24 +14,35 @@ window.addEventListener("load", function() {
     })
 });
 var initQrcode = function(url) {
-	var pre = {
-		'web': url,
-		'map': 'baidumap://map/cost_share?url=' + encodeURIComponent(url)
-		//'baidumap://map/cost_share?url=' + encodeURIComponent(url),
-		// 'lbc': 'baidumap://map/component?comName=lbc&target=webshell_login_page&param=' +
-		// encodeURIComponent(JSON.stringify({'url':url})),
-		// 'nuo': 'bainuo://component?url=' + encodeURIComponent(url),
-		// 'nuoweb': 'bainuo://web?url=' + encodeURIComponent(url)
-	};
+	setTimeout(function(){
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: 'baidumap://map/cost_share?url=' + encodeURIComponent(url),
+            width: 256,
+            height: 256,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+	},50)
+
+	// var pre = {
+	// 	'web': url,
+	// 	'map': 'baidumap://map/cost_share?url=' + encodeURIComponent(url)
+	// 	//'baidumap://map/cost_share?url=' + encodeURIComponent(url),
+	// 	// 'lbc': 'baidumap://map/component?comName=lbc&target=webshell_login_page&param=' +
+	// 	// encodeURIComponent(JSON.stringify({'url':url})),
+	// 	// 'nuo': 'bainuo://component?url=' + encodeURIComponent(url),
+	// 	// 'nuoweb': 'bainuo://web?url=' + encodeURIComponent(url)
+	// };
 	// 正常浏览器url
 	// jQuery('#qrcodeWeb').qrcode({
 	// 	text: pre.web
 	// });
 
 	// 百度地图url 
-	jQuery('#qrcodeMap').qrcode({
-		text: pre.map
-	});	
+	// jQuery('#qrcodeMap').qrcode({
+	// 	text: pre.map
+	// });
 
 	// // lbc壳浏览器url 
 	// jQuery('#qrcodeLbc').qrcode({
