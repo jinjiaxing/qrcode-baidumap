@@ -1,8 +1,8 @@
 {
   "manifest_version":2,
-  "name":"极简二维码",
-  "description":"极简二维码",
-  "version":"1.0",
+  "name":"百度地图扫一扫二维码",
+  "description":"百度地图扫一扫",
+  "version":"1.1",
   "icons": {
         "16": "images/icon.png",
         "48": "images/icon.png",
@@ -12,7 +12,7 @@
   "permissions": ["tabs"],
   "browser_action":{
       "default_icon":"images/icon.png",
-      "default_title":"极简二维码",
+      "default_title":"百度地图扫一扫二维码",
       "default_popup":"popup.html"
   }
    
